@@ -1,0 +1,1 @@
+return redis.call('TS.MREVRANGE', '-', '+', 'COUNT', 100, 'FILTER', 'type=ts-btc-usdt-1m')

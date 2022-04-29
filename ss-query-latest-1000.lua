@@ -1,0 +1,1 @@
+return redis.call('ZRANGE', 'ghost:{0}:ss:btc:usdt:1m', '+inf', '-inf', 'BYSCORE', 'REV', 'LIMIT', 0, 1000)

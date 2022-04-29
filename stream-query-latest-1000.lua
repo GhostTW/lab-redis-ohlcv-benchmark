@@ -1,0 +1,12 @@
+-- local now = tonumber(ARGV[1])
+-- local resInMillSecond = tonumber(ARGV[2])
+-- local latestTimeStamp = tonumber(redis.call('GET', 'ghost:{0}:list:latest:ts'))
+-- local count = tonumber(1000 - tonumber((now - latestTimeStamp)/resInMillSecond))
+-- if count < 0 then
+--     return 0
+-- end
+-- if count > 1000 then
+--     count = 1000
+-- end
+--return cmsgpack.pack(redis.call('LRANGE', 'ghost:{0}:list:btc:usdt:1m', 0, 100))
+return redis.call('XREVRANGE', 'ghost:{0}:stream:btc:usdt:1m', '-', '+', 'COUNT', 1000)

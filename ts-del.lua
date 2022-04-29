@@ -1,0 +1,5 @@
+redis.call('DEL', 'ghost:ts:btc:usdt:1m:open')
+redis.call('DEL', 'ghost:ts:btc:usdt:1m:close')
+redis.call('DEL', 'ghost:ts:btc:usdt:1m:high')
+redis.call('DEL', 'ghost:ts:btc:usdt:1m:low')
+redis.call('DEL', 'ghost:ts:btc:usdt:1m:vol')
